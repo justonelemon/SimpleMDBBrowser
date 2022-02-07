@@ -19,10 +19,10 @@ public class MoviePanel : MonoBehaviour
 
     public void SetImagePoster(string _textureURL)
     {
-        StartCoroutine(downloadMoviePoster(_textureURL));
+        StartCoroutine(DownloadMoviePoster(_textureURL));
     }
 
-    IEnumerator downloadMoviePoster(string _textureURL)
+    IEnumerator DownloadMoviePoster(string _textureURL)
     {
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(_textureURL);
         yield return www.SendWebRequest();
